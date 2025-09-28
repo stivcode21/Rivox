@@ -1,0 +1,10 @@
+.container {
+  background: linear-gradient(0deg, #000000 0%, #11050caa 100%);
+  border-right: 1px solid #363636;
+  padding: 20px;
+}
+
+.img {
+  width: 140px;
+  height: auto;
+}
