@@ -1,0 +1,28 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Bricolage Grotesque", sans-serif;
+}
+
+html {
+  scroll-behavior: auto;
+  overflow: hidden;
+}
+
+body.dark-mode {
+  --surface-primary: #0f0f0f;
+  --background-color: #121212;
+  --foreground-color: #191a1c;
+  --text-primary: #fff;
+  --text-secondary: #dfdfe2;
+  --color-primary: #fde047;
+  --color-primary-dark: #0d3946;
+  --selected: #222325;
+}
+
+body {
+  background: var(--surface-primary);
+  color: var(--text-primary);
+  transition: background var(--dynamic-fast-transition);
+}
