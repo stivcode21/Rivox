@@ -1,0 +1,26 @@
+.containerInput {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: #363636;
+  border-radius: 8px;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  margin: 0 4px;
+  cursor: text;
+}
+
+.buscar {
+  font-size: 16px;
+  height: 100%;
+  color: #fff;
+  background-color: transparent;
+  outline: none;
+  border: none;
+}
