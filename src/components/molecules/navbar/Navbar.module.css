@@ -1,0 +1,39 @@
+.list {
+  width: 100%;
+  margin-top: 15px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 6px;
+}
+
+.item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding: 4px 6px;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+
+.item:active {
+  scale: 0.95;
+  opacity: 0.8;
+}
+
+.item:hover {
+  border-left: #e8175d 4px solid;
+}
+
+.active {
+  border-left: #e8175d 4px solid;
+  transition: all 0.1s ease;
+}
+
+.active svg {
+  color: #e8175d;
+}
