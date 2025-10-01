@@ -27,8 +27,39 @@ body {
   transition: background var(--dynamic-fast-transition);
 }
 
+button {
+  background: none;
+  border: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  padding: 0;
+  margin: 0;
+}
+
 button:active {
   transform: scale(0.9);
-  opacity: 0.8;
   transition: all 0.1s ease-in-out;
+}
+
+li {
+  list-style: none;
+}
+
+/* Estilo del scrollbar */
+::-webkit-scrollbar {
+  width: 4px; /* ancho de la barra vertical */
+  height: 4px; /* alto de la barra horizontal (si hay) */
+}
+
+/* Fondo del scrollbar */
+::-webkit-scrollbar-track {
+  background: #11050c; /* color de fondo oscuro */
+}
+
+/* La parte "que se mueve" (thumb) */
+::-webkit-scrollbar-thumb {
+  background-color: #e8175d76; /* color del thumb */
+  border-radius: 10px; /* bordes redondeados */
 }
