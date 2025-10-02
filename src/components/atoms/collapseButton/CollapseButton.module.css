@@ -32,3 +32,10 @@
 .collapseButton:hover svg {
   color: #ccc;
 }
+
+@media (width <= 768px) {
+  .open {
+    position: fixed;
+    left: 0;
+  }
+}
