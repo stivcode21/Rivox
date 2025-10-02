@@ -4,7 +4,7 @@ import styles from "./SearchBar.module.css";
 const SearchBar = () => {
   return (
     <div className={styles.containerInput}>
-      <label htmlFor="buscar" className={styles.icon}>
+      <label htmlFor="buscar" className={styles.containerIcon}>
         <Search className={styles.icon} />
       </label>
       <input
