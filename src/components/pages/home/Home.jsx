@@ -1,9 +1,10 @@
 import MainLayout from "../../templates/mainLayout/MainLayout";
+import styles from "./Home.module.css";
 
 const Home = () => {
   return (
     <MainLayout>
-      <div>Home</div>
+      <section className={styles.content}>sad</section>
     </MainLayout>
   );
 };
