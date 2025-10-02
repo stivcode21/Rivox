@@ -27,4 +27,29 @@
   background: #0a0307e2;
   flex: 1;
   position: relative;
+  overflow-y: auto;
+}
+
+.children {
+  padding: 0 20px;
+  height: 83%;
+}
+
+@media (width <= 768px) {
+  .sidebar {
+    position: fixed;
+    z-index: 15;
+    height: 100%;
+    left: 0;
+    top: 0;
+  }
+  .container {
+    flex-direction: column;
+  }
+  .content.full {
+    padding: 0;
+  }
+  .content {
+    margin-top: 70px;
+  }
 }
