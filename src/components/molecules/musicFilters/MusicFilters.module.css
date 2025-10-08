@@ -1,0 +1,35 @@
+.navbar {
+  background-color: #3e3e3e;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  overflow-x: auto;
+}
+
+.list {
+  margin-left: 20px;
+  display: flex;
+  gap: 15px;
+}
+
+.item {
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  font-size: 14px;
+}
+
+.item:hover {
+  background: #151515;
+  border: 1px solid #ccc;
+  scale: 1.05;
+  transition: all 0.05s ease-in-out;
+}
+
+@media (width <= 768px) {
+  .item {
+    font-size: 14px;
+    flex-shrink: 0;
+  }
+}
