@@ -1,7 +1,7 @@
 .background {
   width: 100vw;
   height: 100vh;
-  background-image: url("../../../assets/bg.jpg");
+  background-image: url("@/assets/bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -31,7 +31,6 @@
 }
 
 .children {
-  padding: 0 20px;
   height: 83%;
 }
 
