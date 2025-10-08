@@ -12,6 +12,7 @@
   align-items: center;
   gap: 30px;
   box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.5);
+  animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
 .poster {
@@ -45,5 +46,14 @@
 @media (width <= 768px) {
   .container {
     gap: 20px;
+  }
+}
+
+@keyframes slide-top {
+  0% {
+    transform: translateY(100px);
+  }
+  100% {
+    transform: translateY(0px);
   }
 }
