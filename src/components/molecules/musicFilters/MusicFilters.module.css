@@ -1,5 +1,5 @@
 .navbar {
-  background-color: #3e3e3e;
+  background-color: #363636;
   height: 50px;
   display: flex;
   align-items: center;
@@ -21,10 +21,8 @@
 }
 
 .item:hover {
-  background: #151515;
-  border: 1px solid #ccc;
   scale: 1.05;
-  transition: all 0.05s ease-in-out;
+  transition: all 0.1s ease-in-out;
 }
 
 @media (width <= 768px) {
