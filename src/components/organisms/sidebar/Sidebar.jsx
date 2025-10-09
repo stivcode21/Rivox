@@ -11,7 +11,7 @@ const Sidebar = () => {
       <header className={styles.header}>
         <img className={styles.img} src="./LogoRivox.svg" alt="Logo-Rivox" />
         <button>
-          <Ellipsis className={styles.icon} />
+          <CollapseButton />
         </button>
       </header>
       <div className={styles.containerSearch}>
@@ -35,7 +35,6 @@ const Sidebar = () => {
           <PlayLists />
         </article>
       </section>
-      <CollapseButton />
     </div>
   );
 };
