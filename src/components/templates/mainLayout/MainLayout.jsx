@@ -1,10 +1,10 @@
 import { useCollapseSidebar } from "@/store/collapseSidebar";
-import CollapseButton from "@/components/atoms/collapseButton/CollapseButton";
 import Sidebar from "@/components/organisms/sidebar/Sidebar";
 import UtilityBar from "@/components/organisms/utilityBar/UtilityBar";
 import styles from "./MainLayout.module.css";
 import { useEffect } from "react";
 import Player from "@/components/organisms/player/Player";
+import CollapseButton from "@/components/atoms/collapseButton/CollapseButton";
 
 const MainLayout = ({ children }) => {
   const { currentState, setCurrentState } = useCollapseSidebar();
@@ -36,11 +36,16 @@ const MainLayout = ({ children }) => {
             {currentState && <Sidebar />}
           </article>
           <article className={`${styles.content}`}>
-            <div className={styles.children}>{children}</div>
-            {!currentState && <CollapseButton />}
+            {children}
             <Player />
           </article>
           <UtilityBar />
+
+          {!currentState && (
+            <div className={!currentState && styles.open}>
+              <CollapseButton />
+            </div>
+          )}
         </section>
       </div>
     </div>
