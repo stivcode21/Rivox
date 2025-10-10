@@ -2,14 +2,19 @@
   padding: 10px 30px;
 }
 
+.list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
 .item {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid #363636;
-  height: 40px;
-  padding: 40px 10px;
-  background-color: #322a2a;
+  padding: 6px 10px;
 }
 
 .description {
