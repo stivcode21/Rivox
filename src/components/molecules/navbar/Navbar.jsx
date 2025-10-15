@@ -1,27 +1,27 @@
-import { Disc3, Heart, Home, UsersRound } from "lucide-react";
 import styles from "./Navbar.module.css";
 import { useStateSection } from "@/store/stateSection";
+import { useNavigate } from "react-router-dom";
+import { Sections } from "@/data/sections";
 
 const Navbar = () => {
   const { currentSection, setCurrentSection } = useStateSection();
+  const navigate = useNavigate();
 
-  const ITEMS = [
-    { name: "Home", icon: <Home /> },
-    { name: "Favoritos", icon: <Heart /> },
-    { name: "Albumes", icon: <Disc3 /> },
-    { name: "Artista", icon: <UsersRound /> },
-  ];
+  const handleSection = (section) => {
+    setCurrentSection(section.name);
+    navigate(`/${section.path}`);
+  };
 
   return (
     <nav>
       <ul className={styles.list}>
-        {ITEMS.map((item) => (
+        {Sections.map((item) => (
           <li
             className={`${styles.item} ${
               currentSection === item.name ? styles.active : ""
             }`}
             key={item.name}
-            onClick={() => setCurrentSection(item.name)}
+            onClick={() => handleSection(item)}
           >
             <span>{item.icon}</span>
             {item.name}
