@@ -1,18 +1,16 @@
 import { Ellipsis, Plus, PlusIcon } from "lucide-react";
 import styles from "./Sidebar.module.css";
-import SearchBar from "../../atoms/searchBar/SearchBar";
-import Navbar from "../../molecules/navbar/Navbar";
-import PlayLists from "../../molecules/playLists/PlayLists";
-import CollapseButton from "../../atoms/collapseButton/CollapseButton";
+import SearchBar from "@/components/atoms/searchBar/SearchBar";
+import Navbar from "@/components/molecules/navbar/Navbar";
+import PlayLists from "@/components/molecules/playLists/PlayLists";
+import CollapseButton from "@/components/atoms/collapseButton/CollapseButton";
 
 const Sidebar = () => {
   return (
     <div className={styles.container}>
       <header className={styles.header}>
         <img className={styles.img} src="./LogoRivox.svg" alt="Logo-Rivox" />
-        <button>
-          <CollapseButton />
-        </button>
+        <CollapseButton />
       </header>
       <div className={styles.containerSearch}>
         <SearchBar />
