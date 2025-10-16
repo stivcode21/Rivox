@@ -1,4 +1,4 @@
-import { Ellipsis, Plus, PlusIcon } from "lucide-react";
+import { PlusIcon } from "lucide-react";
 import styles from "./Sidebar.module.css";
 import SearchBar from "@/components/atoms/searchBar/SearchBar";
 import Navbar from "@/components/molecules/navbar/Navbar";
