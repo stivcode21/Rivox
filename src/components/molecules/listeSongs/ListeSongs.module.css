@@ -10,17 +10,28 @@
 
 .item {
   width: 100%;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 2fr 2fr 60px;
   align-items: center;
   border-bottom: 1px solid #363636;
   padding: 6px 10px;
 }
 
+.number {
+  font-size: 18px;
+}
+
 .description {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 20px;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
 }
 
 .img {
@@ -28,4 +39,48 @@
   height: 50px;
   object-fit: cover;
   border-radius: 5px;
+}
+
+.name {
+  text-transform: uppercase;
+}
+
+.artist {
+  color: #ccc;
+  font-weight: 300;
+}
+
+.icon {
+  width: 25px;
+  height: 25px;
+}
+
+.icon:hover {
+  color: #e8175d;
+  scale: 1.08;
+  transition: all 0.1s ease-in-out;
+}
+
+@media (width <= 768px) {
+  .item {
+    grid-template-columns: 1fr 1fr 55px;
+  }
+
+  .description {
+    gap: 16px;
+  }
+
+  .number {
+    font-size: 16px;
+  }
+
+  .name,
+  .artist {
+    font-size: 12px;
+  }
+
+  .icon {
+    width: 22px;
+    height: 22px;
+  }
 }
