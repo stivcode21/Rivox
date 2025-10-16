@@ -1,6 +1,5 @@
 import { Ellipsis, Heart } from "lucide-react";
 import styles from "./ListeSongs.module.css";
-import img from "@/assets/mike.webp";
 import { allSongs } from "../../../data/songs";
 
 const ListeSongs = () => {
@@ -8,16 +7,20 @@ const ListeSongs = () => {
     <nav className={styles.container}>
       <ul className={styles.list}>
         {allSongs.map((song) => (
-          <li className={styles.item}>
+          <li className={styles.item} key={song.id}>
             <div className={styles.description}>
-              <span>{song.id + 1}</span>
+              <span className={styles.number}>{song.id + 1}</span>
               <img src={song.img} alt="poster-song" className={styles.img} />
-              <p>{song.title}</p>
+              <p className={styles.name}>{song.title}</p>
             </div>
-            <p>{song.artist}</p>
-            <div>
-              <Heart className={styles.icon} />
-              <Ellipsis className={styles.icon} />
+            <p className={styles.artist}>{song.artist}</p>
+            <div className={styles.icons}>
+              <button>
+                <Heart className={styles.icon} />
+              </button>
+              <button>
+                <Ellipsis className={styles.icon} />
+              </button>
             </div>
           </li>
         ))}
