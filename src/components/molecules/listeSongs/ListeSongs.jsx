@@ -1,6 +1,6 @@
 import { Ellipsis, Heart } from "lucide-react";
 import styles from "./ListeSongs.module.css";
-import { allSongs } from "../../../data/songs";
+import { allSongs } from "@/data/songs";
 
 const ListeSongs = () => {
   return (
