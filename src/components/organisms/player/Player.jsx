@@ -1,6 +1,6 @@
-import ControlsPlayer from "../../atoms/controlsPlayer/ControlsPlayer";
+import ControlsPlayer from "@/components/atoms/controlsPlayer/ControlsPlayer";
 import styles from "./Player.module.css";
-import poster from "../../../assets/poster-mojandoAsientos.webp";
+import poster from "@/assets/poster-mojandoAsientos.webp";
 import { useCollapseSidebar } from "@/store/collapseSidebar";
 
 const Player = () => {
