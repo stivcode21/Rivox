@@ -16,4 +16,13 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  server: {
+    proxy: {
+      "/deezer": {
+        target: "https://api.deezer.com",
+        changeOrigin: true,
+        rewrite: (requestPath) => requestPath.replace(/^\/deezer/, ""),
+      },
+    },
+  },
 });
