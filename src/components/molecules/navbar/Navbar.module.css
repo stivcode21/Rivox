@@ -1,38 +1,44 @@
 .list {
   width: 100%;
-  margin-top: 15px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: start;
-  gap: 6px;
+  gap: 4px;
 }
 
 .item {
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: start;
-  padding: 4px 6px;
-  gap: 8px;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  color: var(--text-secondary);
   cursor: pointer;
-  transition: all 0.1s ease-in-out;
+  transition: background 0.15s ease, color 0.15s ease;
 }
 
-.item:active {
-  scale: 0.95;
-  opacity: 0.8;
+.icon {
+  display: flex;
+  align-items: center;
+}
+
+.icon svg {
+  width: 18px;
+  height: 18px;
 }
 
 .item:hover {
-  border-left: #e8175d 4px solid;
+  background: var(--bg-hover);
+  color: var(--text-primary);
 }
 
 .active {
-  border-left: #e8175d 4px solid;
-  transition: all 0.1s ease;
+  background: linear-gradient(90deg, var(--bg-active), transparent);
+  box-shadow: inset 3px 0 0 var(--accent);
+  color: var(--text-primary);
+  font-weight: 600;
 }
 
 .active svg {
-  color: #e8175d;
+  color: var(--accent);
 }

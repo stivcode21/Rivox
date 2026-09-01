@@ -9,45 +9,39 @@ import CollapseButton from "@/components/atoms/collapseButton/CollapseButton";
 const MainLayout = ({ children }) => {
   const { currentState, setCurrentState } = useCollapseSidebar();
 
-  //ocultar sidebar en pantallas pequeñas
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth <= 768) {
-        setCurrentState(false);
-      } else {
-        setCurrentState(true);
-      }
+      setCurrentState(window.innerWidth > 768);
     };
 
     handleResize();
-
-    // Ejecutar al inicio
     window.addEventListener("resize", handleResize);
-
-    // Limpiar el event listener al desmontar
     return () => window.removeEventListener("resize", handleResize);
   }, [setCurrentState]);
 
   return (
-    <div className={styles.background}>
-      <div className={styles.effect}>
-        <section className={styles.container}>
-          <article className={styles.sidebar}>
-            {currentState && <Sidebar />}
-          </article>
-          <article className={`${styles.content}`}>
-            {children}
-            <Player />
-          </article>
-          <UtilityBar />
+    <div className={styles.shell}>
+      <div className={styles.workspace}>
+        {currentState && (
+          <aside className={styles.sidebar}>
+            <Sidebar />
+          </aside>
+        )}
 
-          {!currentState && (
-            <div className={!currentState && styles.open}>
-              <CollapseButton />
-            </div>
-          )}
-        </section>
+        <main className={styles.main}>{children}</main>
+
+        <aside className={styles.utility}>
+          <UtilityBar />
+        </aside>
       </div>
+
+      <Player />
+
+      {!currentState && (
+        <div className={styles.open}>
+          <CollapseButton />
+        </div>
+      )}
     </div>
   );
 };

@@ -1,33 +1,35 @@
 .navbar {
-  background-color: #363636;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  overflow-x: auto;
+  padding: 8px 32px 0;
 }
 
 .list {
-  margin-left: 15px;
   display: flex;
-  gap: 10px;
+  gap: 8px;
+  overflow-x: auto;
+  border-bottom: 1px solid var(--border);
 }
 
 .item {
-  padding: 8px 8px;
-  border-radius: 4px;
-  cursor: pointer;
-  border: 1px solid transparent;
+  padding: 12px 10px;
+  color: var(--text-muted);
   font-size: 14px;
+  cursor: pointer;
+  white-space: nowrap;
+  border-bottom: 2px solid transparent;
 }
 
 .item:hover {
-  scale: 1.05;
-  transition: all 0.1s ease-in-out;
+  color: var(--text-primary);
+}
+
+.active {
+  color: var(--text-primary);
+  border-bottom-color: var(--accent);
+  font-weight: 600;
 }
 
 @media (width <= 768px) {
-  .item {
-    font-size: 14px;
-    flex-shrink: 0;
+  .navbar {
+    padding: 8px 16px 0;
   }
 }

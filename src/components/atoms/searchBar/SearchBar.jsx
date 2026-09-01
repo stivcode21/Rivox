@@ -10,10 +10,11 @@ const SearchBar = () => {
       <input
         type="text"
         id="buscar"
-        placeholder="Buscar"
+        placeholder="Buscar música, artistas..."
         name="buscar"
         className={styles.buscar}
       />
+      <kbd className={styles.shortcut}>⌘K</kbd>
     </div>
   );
 };

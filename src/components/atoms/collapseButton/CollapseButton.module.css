@@ -1,26 +1,18 @@
 .collapseButton {
-  padding: 5px;
+  padding: 6px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid transparent;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: all 0.1s ease-in-out;
+  border-radius: 8px;
+  color: var(--text-muted);
 }
 
 .collapseButton:hover {
-  border: #444 1px solid;
-  background: linear-gradient(0deg, #000000 0%, #11050c 100%);
-  color: #ccc;
+  background: var(--bg-hover);
+  color: var(--text-primary);
 }
 
 .collapseButton svg {
-  color: #444;
-  width: 22px;
-  height: 22px;
-}
-
-.collapseButton:hover svg {
-  color: #ccc;
+  width: 18px;
+  height: 18px;
 }

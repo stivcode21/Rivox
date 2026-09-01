@@ -1,17 +1,15 @@
 import styles from "./MusicFilters.module.css";
 
-const MusicFilters = () => {
-  const FILTERS = [
-    { id: "1", name: "Top Global" },
-    { id: "2", name: "Tencencias" },
-    { id: "3", name: "Raggaetong" },
-    { id: "5", name: "Trap" },
-  ];
+const MusicFilters = ({ filters = [], activeId, onChange }) => {
   return (
     <nav className={styles.navbar}>
       <ul className={styles.list}>
-        {FILTERS.map((section) => (
-          <li key={section.id} className={styles.item}>
+        {filters.map((section) => (
+          <li
+            key={section.id}
+            className={`${styles.item} ${activeId === section.id ? styles.active : ""}`}
+            onClick={() => onChange?.(section.id)}
+          >
             {section.name}
           </li>
         ))}

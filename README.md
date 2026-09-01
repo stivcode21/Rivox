@@ -1,18 +1,22 @@
-# React + Vite
+# Rivox
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Cliente de música en React. El catálogo sale de la **API pública de Deezer**; la UI no habla con Deezer directo.
 
-Currently, two official plugins are available:
+## Cómo empezar
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```bash
+npm install
+npm run dev
+```
 
-## React Compiler
+## Documentación
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+Para entender capas, API, rutas y por qué está armado así:
 
-Note: This will impact Vite dev & build performances.
+**[docs/ARQUITECTURA.md](docs/ARQUITECTURA.md)**
 
-## Expanding the ESLint configuration
+## Scripts
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript  and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- `npm run dev` — desarrollo (incluye proxy `/deezer`)
+- `npm run build` — build de producción
+- `npm run preview` — servir el build

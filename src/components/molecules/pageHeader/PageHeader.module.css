@@ -1,0 +1,31 @@
+.header {
+  padding: 28px 32px 8px;
+}
+
+.eyebrow {
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.header h1 {
+  font-size: 40px;
+  line-height: 1.1;
+}
+
+.subtitle {
+  margin-top: 8px;
+  color: var(--text-secondary);
+}
+
+@media (width <= 768px) {
+  .header {
+    padding: 20px 16px 8px;
+  }
+
+  .header h1 {
+    font-size: 28px;
+  }
+}

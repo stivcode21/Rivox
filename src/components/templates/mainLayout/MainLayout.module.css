@@ -1,62 +1,96 @@
-.background {
+.shell {
   width: 100vw;
   height: 100vh;
-  background-image: url("@/assets/bg.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
-.effect {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(10px);
-}
-
-.container {
   display: flex;
-  width: 100%;
-  height: 100%;
+  flex-direction: column;
+  gap: 8px;
+  padding: 8px 8px 0;
+  background: var(--bg-app);
+  overflow: hidden;
 }
 
-.content {
-  width: 100%;
-  height: 100%;
-  padding-bottom: 120px;
-  background: #0a0307e2;
+.workspace {
   flex: 1;
-  position: relative;
+  min-height: 0;
+  display: flex;
+  gap: 8px;
+}
+
+.sidebar,
+.utility {
+  height: 100%;
+  min-height: 0;
+}
+
+.sidebar {
+  width: var(--sidebar-width);
+  flex-shrink: 0;
+}
+
+.utility {
+  width: var(--aside-width);
+  flex-shrink: 0;
+}
+
+.main {
+  flex: 1;
+  min-width: 0;
+  height: 100%;
   overflow-y: auto;
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
 }
 
 .open {
   position: fixed;
-  top: 10px;
-  left: 10px;
+  top: 18px;
+  left: 18px;
+  z-index: 30;
+}
+
+@media (width <= 1180px) {
+  .utility {
+    width: 84px;
+  }
 }
 
 @media (width <= 768px) {
-  .open {
-    display: none;
+  .shell {
+    padding: 0;
+    gap: 0;
+  }
+
+  .workspace {
+    flex-direction: column;
+    gap: 0;
   }
 
   .sidebar {
     position: fixed;
-    z-index: 15;
-    height: 100%;
+    z-index: 20;
+    height: calc(100% - var(--player-height));
     left: 0;
     top: 0;
+    width: min(268px, 86vw);
   }
 
-  .container {
-    flex-direction: column;
+  .utility {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 18;
+    width: 100%;
+    height: auto;
   }
 
-  .content {
-    margin-top: 55px;
+  .main {
+    margin-top: 62px;
+    border-radius: 0;
+    border: none;
+  }
+
+  .open {
+    display: none;
   }
 }

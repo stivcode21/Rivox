@@ -1,0 +1,9 @@
+.status,
+.error {
+  padding: 24px 32px;
+  color: var(--text-muted);
+}
+
+.error {
+  color: #ff8aa8;
+}

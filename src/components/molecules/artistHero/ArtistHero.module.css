@@ -1,0 +1,122 @@
+.hero {
+  position: relative;
+  min-height: 320px;
+  background-size: cover;
+  background-position: center top;
+  display: flex;
+  align-items: flex-end;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(12, 12, 12, 0.15) 0%,
+    rgba(12, 12, 12, 0.55) 48%,
+    rgba(12, 12, 12, 0.98) 100%
+  );
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  padding: 28px 32px;
+  width: 100%;
+}
+
+.rank {
+  display: inline-flex;
+  margin-bottom: 8px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+}
+
+.label {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-secondary);
+}
+
+.name {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 56px;
+  line-height: 1;
+  margin: 6px 0 10px;
+}
+
+.badge {
+  width: 28px;
+  height: 28px;
+  fill: #249ef0;
+  color: #249ef0;
+}
+
+.listeners {
+  color: var(--text-secondary);
+  margin-bottom: 18px;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.play,
+.follow,
+.more {
+  height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 999px;
+}
+
+.play {
+  padding: 0 18px;
+  background: var(--accent);
+  font-weight: 700;
+}
+
+.play svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}
+
+.follow {
+  padding: 0 16px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.more {
+  width: 42px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.more svg {
+  width: 18px;
+  height: 18px;
+}
+
+@media (width <= 768px) {
+  .hero {
+    min-height: 240px;
+  }
+
+  .content {
+    padding: 20px 16px;
+  }
+
+  .name {
+    font-size: 34px;
+  }
+}
