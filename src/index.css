@@ -10,21 +10,48 @@ html {
   overflow: hidden;
 }
 
+:root,
 body.dark-mode {
+  --bg-app: #050505;
+  --bg-panel: #0c0c0c;
+  --bg-elevated: #161616;
+  --bg-hover: #1d1d1d;
+  --bg-active: rgba(232, 23, 93, 0.16);
+  --accent: #e8175d;
+  --accent-hover: #ff2d72;
+  --text-primary: #ffffff;
+  --text-secondary: #c6c6c6;
+  --text-muted: #8d8d8d;
+  --border: #262626;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --sidebar-width: 268px;
+  --aside-width: 304px;
+  --player-height: 92px;
   --surface-primary: #0f0f0f;
   --background-color: #121212;
   --foreground-color: #191a1c;
-  --text-primary: #fff;
-  --text-secondary: #dfdfe2;
-  --color-primary: #fde047;
+  --color-primary: #e8175d;
   --color-primary-dark: #0d3946;
   --selected: #222325;
 }
 
+body.light-mode {
+  --bg-app: #ececec;
+  --bg-panel: #ffffff;
+  --bg-elevated: #f4f4f4;
+  --bg-hover: #ececec;
+  --bg-active: rgba(232, 23, 93, 0.1);
+  --text-primary: #111111;
+  --text-secondary: #3f3f3f;
+  --text-muted: #6b6b6b;
+  --border: #e4e4e4;
+}
+
 body {
-  background: var(--surface-primary);
+  background: var(--bg-app);
   color: var(--text-primary);
-  transition: background var(--dynamic-fast-transition);
 }
 
 button {
@@ -38,28 +65,20 @@ button {
   margin: 0;
 }
 
-button:active {
-  transform: scale(0.9);
-  transition: all 0.1s ease-in-out;
-}
-
 li {
   list-style: none;
 }
 
-/* Estilo del scrollbar */
 ::-webkit-scrollbar {
-  width: 4px; /* ancho de la barra vertical */
-  height: 4px; /* alto de la barra horizontal (si hay) */
+  width: 4px;
+  height: 4px;
 }
 
-/* Fondo del scrollbar */
 ::-webkit-scrollbar-track {
-  background: #11050c; /* color de fondo oscuro */
+  background: transparent;
 }
 
-/* La parte "que se mueve" (thumb) */
 ::-webkit-scrollbar-thumb {
-  background-color: #e8175d76; /* color del thumb */
-  border-radius: 10px; /* bordes redondeados */
+  background-color: #e8175d76;
+  border-radius: 10px;
 }
